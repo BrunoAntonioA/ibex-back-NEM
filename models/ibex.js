@@ -5,7 +5,8 @@ var Ibex = mongoose.model('Ibex', {
     filename: String,
     fnctions: [],
     domains: [],
-    constraints: []
+    constraints: [],
+    port: int
 });
 
 module.exports = { Ibex } ; 

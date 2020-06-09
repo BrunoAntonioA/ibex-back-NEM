@@ -33,7 +33,8 @@ router.post('/', (req,res) =>{
         filename: req.body.filename,
         fnctions: req.body.fnctions,
         domains: req.body.domains,
-        constraints: req.body.constraints
+        constraints: req.body.constraints,
+        port: req.body.port
     });
     console.log("ibex: ", ibex)
     ibex.save((err, doc) => {
@@ -57,7 +58,8 @@ router.put('/:id', (req, res) => {
         filename: req.body.filename,
         fnctions: req.body.fnctions,
         domains: req.body.domains,
-        constraints: req.body.constraints
+        constraints: req.body.constraints,
+        port: req.body.port
     });
     Ibex.findByIdAndUpdate(req.params.id, { $set: ibex}, { new: true }, (err,doc) =>{
         if (!err) { res.send(doc); }
